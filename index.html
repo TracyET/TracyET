@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <img src="../foto/logo.png" alt="Logo">
+                <h4>wHeel <br> Hub</h4>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li class="dropdown">
+                    <div class="home">
+                        <a href="#">Home</a> <span class="arrow" id="drop2">&#9660;</span>
+                    </div>
+                    <ul class="dropdown-content" id="dropdown-content2">
+                        <li><a href="#feature">Featured Cars</a></li>
+                        <li><a href="#promo">Promotions</a></li>
+                    </ul>
+                </li>
+                <li><a href="./html/promotions.html">Promotions</a></li>
+                <li><a href="./html/AllCars.html">All Cars</a></li>
+                <li class="dropdown">
+                    <div class="about-us">
+                        <a href="./html/aboutUs.html">About Us</a> <span class="arrow" id="drop">&#9660;</span>
+                    </div>
+                    <ul class="dropdown-content" id="dropdown-content">
+                        <li><a href="./html/aboutUs.html#vision">Vision</a></li>
+                        <li><a href="./html/aboutUs.html#mision">Mission</a></li>
+                    </ul>
+                </li>
+                <li><a href="./html/register.html">Register</a></li>
+            </ul>
+
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <div class="hamburger2" id="hamburger2">
+                <div class="bar2"></div>
+                <div class="bar2"></div>
+                <div class="bar2"></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="trapezoid"></div>
+        <img src="../Assets/23_bZ4X_XLE_WindChillPearl_2.png" class="pic" alt="Car">
+        <div class="slogan">
+            <h2>LET'S GET YOU <br><span>ON THE ROAD</span></h2>
+            <h3>Via Our High Quality and Maintained and Affordable Cars. Take A Look Around Our HomePage To See Our Featured Cars and Promos</h3>
+            <div class="button">
+                <div class="button1"><a href="./html/aboutUs.html">About Us</a></div>
+                <div class="button2"><a href="./html/AllCars.html">All Cars</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container2" id="feature">
+        <h1 class="feature">Featured Cars</h1>
+        <div class="car1">
+            <h1>TOYOTA<br>HIGHLANDER</h1>
+            <img src="../Assets/about_us/car_interior.jpeg" alt="Toyota Highlander">
+        </div>
+        <div class="car2">
+            <img src="../Assets/2024HighlanderHybridToyota.png.webp" alt="Toyota Highlander Hybrid">
+            <p>The Toyota Highlander stands as a testament to Toyota's commitment to quality, reliability, and innovation. Perfect for families, adventurers, and anyone who values both comfort and performance, the Highlander offers an exceptional driving experience.</p>
+        </div>
+        <div class="car3">
+            <img src="../Assets/product_card/2023_Mirai.jpeg" alt="Toyota Mirai">
+            <div class="text">
+                <h1>TOYOTA MIRAI</h1>
+                <p>Step into the future with the Toyota Mirai, a groundbreaking hydrogen fuel cell vehicle that redefines what it means to drive green. With zero emissions, the Mirai offers an eco-friendly driving experience without compromising on performance or style.</p>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="title2">Promotions</h1>
+    <div class="carousel" id="promo">
+        <div class="carousel-image-container">
+            <img src="../Assets/promotion_banner/2023_mirai.jpeg" alt="2023 Mirai" class="carousel-image">
+            <img src="../Assets/promotion_banner/2024_corola_hatchback.jpeg" alt="2024 Corolla Hatchback" class="carousel-image">
+            <img src="../Assets/promotion_banner/2024_corola_hybrid.jpeg" alt="2024 Corolla Hybrid" class="carousel-image">
+        </div>
+        <div class="buttons">
+            <div class="button" id="prev"><</div>
+            <div class="button" id="next">></div>
+        </div>
+    </div>
+
+    
+    <script src="../js/scripts.js"></script>
+    <script src="../js/jquery.js"></script>
+
+
+</body>
+
+</html>

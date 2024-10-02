@@ -1,0 +1,796 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    overflow-x: hidden;
+    animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.navbar {
+    box-sizing: border-box;
+    padding: 0.6rem 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 60px;
+    width: 60px;
+}
+
+.navbar h4 {
+    color: white;
+    font-size: 20px;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.hamburger2 {
+    display: none;
+    flex-direction: row;
+    cursor: pointer;
+
+
+}
+
+
+
+.bar2 {
+    width: 3px;
+    height: 25px;
+    background-color: white;
+    margin: 0 4px;
+    transition: 0.4s;
+}
+
+.nav-links {
+    list-style: none;
+    display: none;
+    flex-direction: row;
+    width: 100vw;
+    padding: 0;
+    justify-content: center;
+
+}
+
+@keyframes navIn {
+    0% {
+        transform: translateX(100%);
+
+    }
+}
+
+
+.nav-links li {
+    text-align: center;
+    padding: 1rem;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+
+}
+
+.nav-links li a:hover {
+    color: red;
+}
+
+.show {
+    display: flex;
+    animation: navIn .4s forwards;
+    
+}
+
+.hide {
+    display: none;
+}
+
+.about-us, .home{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.about-us .arrow, .home .arrow{
+    color: white;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.about-us .arrow:hover, .home .arrow:hover{
+    color: red;
+}
+
+
+.dropdown-content {
+    display: none;
+    flex-direction: column;
+    padding: 0;
+    margin-top: 1rem;
+    position: absolute;
+    background-color: black ;
+}
+
+
+.dropdown-content.show {
+    display: flex;
+}
+
+.dropdown-content li {
+    padding: 1rem;
+    list-style: none;
+}
+
+.dropdown-content li a {
+    color: white;
+}
+
+.container {
+    height: 50vh;
+    width: 100vw;
+    background-color: rgb(126, 6, 6);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 3rem;
+    gap: 2rem;
+    background-image: url('../Assets/product_card/2024_GR_Corolla.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-blend-mode: overlay;
+    margin-bottom: 10rem;
+}
+
+.container img {
+    height: 50vh;
+    width: 100vw;
+}
+
+.container h1 {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 60px;
+}
+
+.container p {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.img-container {
+    box-sizing: border-box;
+    position: relative;
+    margin: 5rem 0;
+}
+
+.img-container h1 {
+    color: white;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.img-container .slide-container .slide {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+    padding: 0 5rem 0 0;
+    padding-bottom: 5rem;
+    flex-direction: row;
+}
+
+.img-container .slide-container .slide .content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 5rem;
+    gap: 4rem;
+    animation: slideContent .4s linear .6s backwards;
+}
+
+@keyframes slideContent {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+}
+
+.img-container .slide-container .slide .image {
+    background-color: rgb(126, 6, 6);
+    width: 35vw;
+    height: 60vh;
+    border-radius: 0 20% 20% 0;
+}
+
+.img-container .slide-container .slide .image img {
+    width: 35vw;
+    height: 45vh;
+    margin: 5rem;
+    border-radius: 0 10% 10% 0;
+    animation: slideImage .4s linear;
+}
+
+@keyframes slideImage {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+.img-container .slide-container .slide .content h1 {
+    font-size: 40px;
+    color: white;
+    font-weight: bolder;
+}
+
+.img-container .slide-container .slide .content p {
+    font-size: 20px;
+    color: white;
+    text-align: justify;
+}
+
+.img-container .slide-container {
+    display: none;
+}
+
+.img-container .slide-container.active {
+    display: block;
+}
+
+.img-container #prev, .img-container #next {
+    position: absolute;
+    top: 50%;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    font-weight: 800;
+    font-family: brush script mt, cursive;
+    padding: 0.5rem 1rem;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+}
+
+.img-container #prev:hover, .img-container #next:hover {
+    color: white;
+    background-color: red;
+}
+
+.img-container #prev {
+    left: 43vw;
+}
+
+.img-container #next {
+    right: 20px;
+}
+
+.vision {
+    box-sizing: border-box;
+    padding: 3rem;
+    margin-bottom: 10rem;
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    gap: 6rem;
+    justify-content: center;
+}
+
+.vision img {
+    width: 40vw;
+    height: 50vh;
+}
+
+.vision .details {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 40vw;
+    gap: 3rem;
+}
+
+.vision h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: 1000;
+}
+
+.vision h3 {
+    color: red;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.vision p {
+    color: white;
+    font-size: 20px;
+}
+
+.mision {
+    box-sizing: border-box;
+    padding: 3rem;
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    gap: 6rem;
+    justify-content: center;
+    margin-bottom: 20rem;
+}
+
+.mision img {
+    width: 40vw;
+    height: 50vh;
+}
+
+.mision .details {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 40vw;
+    gap: 3rem;
+}
+
+.mision h1 {
+    color: white;
+    font-size: 50px;
+}
+
+
+.mision h3{
+    color: red;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.mision p{
+    color: white;
+    font-size: 20px;
+}
+
+
+.banner{
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   
+}
+
+
+.banner .image2{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 40%;
+    height: 50%;
+
+    
+    
+}
+
+.banner .image2 img{
+    width: 100%;
+    height: 100%;
+   
+}  
+
+
+.banner .join{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 50%;
+    text-align: justify;
+    padding: 0 1rem;
+    gap: 1rem;
+}
+
+.banner .join .button{
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+    margin: 1rem;
+    
+
+} 
+
+.banner .join .button a{
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 0.5rem 1rem;
+}
+
+.banner .join .button a:hover{
+    background-color: red;
+    color: white;
+    border: none;
+ 
+} 
+
+
+
+
+@media only screen and (max-width: 768px) {
+    
+
+    .img-container .slide-container .slide{
+        gap: 5rem;
+        height: 60vh;
+    }
+    
+    .img-container .slide-container .slide .image{
+        width: 30vw;
+        height: 30vh;
+    }
+
+    .img-container .slide-container .slide .image img{
+        width: 30vw;
+        height: 25vh;
+    }
+
+    .img-container .slide-container .slide .content h1{
+        font-size: 30px;
+    }
+    
+    .img-container .slide-container .slide .content p{
+        font-size: 15px;
+        width: 38vw;
+    }
+
+    .img-container #prev, .img-container #next{
+        font-size: 25px;
+    }
+    
+    
+
+    .vision img{
+        width: 40vw;
+        height: 35vh;
+    }
+
+    .mision img{
+        width: 40vw;
+        height: 35vh;
+    }
+
+
+    .banner .join{
+        height: 40%;
+    }
+
+    .banner .image2{
+        height: 40%;
+    }
+
+    .banner .join h1{
+        font-size: 25px;
+    }
+
+    .banner .join p{
+        font-size: 13px;
+    }
+   
+    .banner .join .button a{
+        font-size: 12px;
+    }
+
+    
+}
+
+
+@media only screen and (max-width: 360px) {
+
+    .navbar{
+        padding: 0.5rem 0;
+    }
+    .navbar .logo img {
+        height: 20px;
+        width: 20px;
+    }
+    
+    .navbar h4 {
+        font-size: 10px;
+    }
+    
+    .bar {
+        width: 15px;
+        height: 1.5px;
+        margin: 2px 10px;
+    }
+    
+    
+    .bar2 {
+        width: 1.5px;
+        height: 15px;
+        margin: 10px 2px;
+    }
+    
+
+    .nav-links li {
+        text-align: center;
+        padding: 3px;
+    }
+    
+    .nav-links li a {
+        font-size: 10px;
+    }
+
+    .about-us, .home{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+    }
+    
+    .about-us .arrow, .home .arrow{
+        color: white;
+        margin-left: 2px;
+        cursor: pointer;
+        font-size: 10px;
+    }
+    
+    
+    .dropdown-content {
+        display: none;
+        flex-direction: column;
+        padding: 0;
+        margin-top: 0.5rem;
+        position: absolute;
+        background-color: black ;
+    }
+    
+    
+    .dropdown-content.show {
+        display: flex;
+    }
+    
+    .dropdown-content li {
+        padding: 1rem;
+        list-style: none;
+    }
+    
+    .dropdown-content li a {
+        color: white;
+        font-size: 10px;
+    }
+    
+    
+
+    .container h1{
+        font-size: 40px;
+    }
+    
+    .container p{
+        font-size: 13px;
+    }
+
+    .img-container .slide-container .slide{
+        gap: 4rem;
+
+    }
+
+
+
+    .img-container .slide-container .slide .image{
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+    }
+
+    .img-container .slide-container .slide .image img{
+        width: 35vw;
+        height: 20vh;
+        margin: 0;
+    }
+
+    .img-container .slide-container .slide .content{
+        margin: 0;
+        gap: 1rem;
+        
+     }
+
+    .img-container .slide-container .slide .content h1{
+        font-size: 20px;
+    }
+    
+    .img-container .slide-container .slide .content p{
+        font-size: 12px;
+
+    }
+    
+
+    
+    .img-container #prev, .img-container #next{
+        font-size: 20px;
+        top: 45%;
+    }
+    
+    
+    .img-container #prev{
+        left: 35vw;
+    }
+    
+    .img-container #next{
+        right: 2px;
+    }
+    
+
+    .vision{
+        gap: 2rem;
+        padding: 0;
+        align-items: center;
+
+
+    }
+
+    .vision h1{
+        position: relative;
+        right: 50%;
+    }
+
+    .vision h3{
+        position: relative;
+        right: 135%;
+        width: 100vw;
+        font-size: 15px;
+        
+    }
+
+    .vision img{
+        width: 40vw;
+        height: 25vh;
+        margin-top: 5rem;
+
+    }
+    
+
+    .vision .details{
+        gap: 1rem;
+       
+    }
+
+    .vision h1{
+        font-size: 30px;
+    }
+    
+    .vision p{
+        color: white;
+        font-size: 12px;
+        text-align: justify;
+    }
+
+
+
+    .mision{
+        gap: 2rem;
+        padding: 0;
+        align-items: center;
+
+
+    }
+
+    .mision h1{
+        position: relative;
+        font-size: 30px;
+        left: 70%;
+    }
+
+    .mision h3{
+        position: relative;
+    
+        width: 100vw;
+        font-size: 15px;
+        
+    }
+
+    .mision img{
+        width: 40vw;
+        height: 25vh;        
+        margin-top: 5rem;
+    }
+    
+
+    .mision .details{
+        gap: 1rem;
+       
+    }
+
+    .mision p{
+        color: white;
+        font-size: 12px;
+        text-align: justify;
+    }
+
+    .banner{
+        height: 50vh;
+    }
+   
+    .banner .join{
+        gap: 0;
+        height: 60%;
+        width: 30%;
+    }
+
+    .banner .image2{
+        height: 60%;
+        width: 40%;
+    }
+   
+   
+    .banner .join h1{
+        font-size: 12px;
+    }
+
+    .banner .join p{
+        font-size: 8px;
+    }
+   
+    .banner .join .button a{
+        font-size: 8px;
+
+    }
+    .banner .join .button{
+        margin: 0;
+    }
+
+    .banner .join .button a{
+        padding: 0.2rem;
+    }
+    
+
+
+    
+}
